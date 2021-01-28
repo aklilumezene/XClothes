@@ -7,8 +7,11 @@ const client = new Client({
     password: 'klwklw',
     port: 5432,
   })
+  
   client.connect()
   client.query('SELECT NOW()', (err, res) => {
     console.log(err, res)
     client.end()
   })
+
+ console.log('server is finishing')
